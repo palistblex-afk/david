@@ -1,0 +1,922 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DF David Ferreira Advocacia e Consultoria Jurídica</title>
+  <meta name="description" content="DF David Ferreira Advocacia e Consultoria Jurídica em Palmares - PE. Atendimento jurídico com profissionalismo, confiança e compromisso.">
+  <meta name="theme-color" content="#0b1f33">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f5f0;
+      color: #18202a;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 31, 51, 0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
+
+    .logo span {
+      display: block;
+      color: #c8a45d;
+      font-size: 11px;
+      letter-spacing: 2px;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: #c8a45d;
+    }
+
+    .nav-button {
+      background: #c8a45d;
+      color: #0b1f33 !important;
+      padding: 10px 17px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      padding: 150px 25px 90px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(7,20,34,.96), rgba(7,20,34,.80)),
+        radial-gradient(circle at 80% 30%, #284763, #071422 70%);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+    }
+
+    .hero small {
+      color: #c8a45d;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 780px;
+      margin: 20px 0;
+      font-family: Georgia, serif;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.08;
+      font-weight: 500;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #d6dce2;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: #c8a45d;
+      color: #071422;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #d9b875;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.4);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      border-color: #c8a45d;
+      color: #c8a45d;
+    }
+
+    /* SEÇÕES */
+    section {
+      padding: 90px 25px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title span {
+      color: #b28c48;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    .section-title h2 {
+      color: #0b1f33;
+      font-family: Georgia, serif;
+      font-size: 42px;
+      font-weight: 500;
+      margin-top: 8px;
+    }
+
+    .section-title p {
+      max-width: 650px;
+      margin: 15px auto 0;
+      color: #68717b;
+    }
+
+    /* SOBRE */
+    .about {
+      background: #fff;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text h3 {
+      color: #0b1f33;
+      font-family: Georgia, serif;
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #5e6872;
+      margin-bottom: 15px;
+    }
+
+    .quote {
+      border-left: 4px solid #c8a45d;
+      padding: 18px 20px;
+      background: #f7f5f0;
+      margin-top: 25px;
+      font-family: Georgia, serif;
+      color: #263646;
+      font-size: 18px;
+    }
+
+    .about-card {
+      background: #0b1f33;
+      color: white;
+      padding: 45px;
+      border-radius: 8px;
+      box-shadow: 0 20px 50px rgba(11,31,51,.15);
+    }
+
+    .about-card .number {
+      font-size: 50px;
+      color: #c8a45d;
+      font-family: Georgia, serif;
+    }
+
+    .about-card h3 {
+      font-family: Georgia, serif;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .about-card p {
+      color: #cbd3db;
+    }
+
+    /* SERVIÇOS */
+    .services {
+      background: #f7f5f0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      background: white;
+      padding: 35px 28px;
+      border: 1px solid #e9e5dd;
+      transition: .3s;
+    }
+
+    .service:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0,0,0,.08);
+      border-color: #c8a45d;
+    }
+
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #c8a45d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b28c48;
+      font-size: 22px;
+      margin-bottom: 22px;
+    }
+
+    .service h3 {
+      color: #0b1f33;
+      font-family: Georgia, serif;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      color: #69727b;
+      font-size: 14px;
+    }
+
+    /* DIFERENCIAIS */
+    .features {
+      background: #0b1f33;
+      color: white;
+    }
+
+    .features .section-title h2 {
+      color: white;
+    }
+
+    .features .section-title p {
+      color: #c2ccd5;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .feature {
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .feature strong {
+      color: #c8a45d;
+      font-size: 30px;
+      font-family: Georgia, serif;
+    }
+
+    .feature h3 {
+      margin: 12px 0 8px;
+      font-family: Georgia, serif;
+      font-size: 21px;
+    }
+
+    .feature p {
+      color: #bdc7d0;
+      font-size: 14px;
+    }
+
+    /* AVALIAÇÃO */
+    .reviews {
+      background: white;
+      text-align: center;
+    }
+
+    .rating {
+      font-size: 25px;
+      color: #c8a45d;
+      letter-spacing: 5px;
+      margin-bottom: 10px;
+    }
+
+    .rating-number {
+      font-family: Georgia, serif;
+      font-size: 54px;
+      color: #0b1f33;
+    }
+
+    .review-text {
+      max-width: 650px;
+      margin: 15px auto;
+      color: #626c75;
+    }
+
+    /* CONTATO */
+    .contact {
+      background: #f7f5f0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 35px;
+      border: 1px solid #e7e2d9;
+    }
+
+    .contact-card h3 {
+      color: #0b1f33;
+      font-family: Georgia, serif;
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      margin-bottom: 20px;
+    }
+
+    .contact-item span {
+      display: block;
+      color: #b28c48;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .contact-item a,
+    .contact-item p {
+      color: #3d4852;
+    }
+
+    .phone {
+      color: #0b1f33 !important;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .map {
+      width: 100%;
+      min-height: 390px;
+      border: 0;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 70px 25px;
+      background: #c8a45d;
+      text-align: center;
+      color: #0b1f33;
+    }
+
+    .cta h2 {
+      font-family: Georgia, serif;
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      margin-bottom: 25px;
+    }
+
+    .cta .btn {
+      background: #0b1f33;
+      color: white;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #071422;
+      color: #9ca8b3;
+      padding: 35px 25px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      z-index: 2000;
+      box-shadow: 0 8px 25px rgba(0,0,0,.25);
+      transition: .3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 850px) {
+      nav {
+        display: none;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid,
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 70px 18px;
+      }
+
+      .nav {
+        padding: 15px 18px;
+      }
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .hero {
+        padding: 130px 18px 70px;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section-title h2 {
+        font-size: 34px;
+      }
+
+      .services-grid,
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-card {
+        padding: 30px;
+      }
+
+      .cta h2 {
+        font-size: 31px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU -->
+  <header>
+    <div class="nav">
+      <a href="#inicio" class="logo">
+        DF DAVID FERREIRA
+        <span>ADVOCACIA & CONSULTORIA</span>
+      </a>
+
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contato">Contato</a>
+        <a class="nav-button" href="tel:+5581997671068">Ligar agora</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <small>Advocacia & Consultoria Jurídica</small>
+
+      <h1>
+        Justiça, confiança e estratégia para proteger seus direitos.
+      </h1>
+
+      <p>
+        Atendimento jurídico profissional em Palmares - Pernambuco,
+        com compromisso, transparência e dedicação a cada caso.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="tel:+5581997671068">
+          Falar com o escritório
+        </a>
+
+        <a class="btn btn-outline" href="#contato">
+          Ver localização
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about" id="sobre">
+    <div class="container">
+
+      <div class="section-title">
+        <span>O escritório</span>
+        <h2>Atendimento jurídico com propósito</h2>
+        <p>
+          Uma atuação baseada em responsabilidade, confiança e atenção
+          às necessidades de cada cliente.
+        </p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-text">
+          <h3>
+            Experiência e dedicação para buscar as melhores soluções jurídicas.
+          </h3>
+
+          <p>
+            A <strong>DF David Ferreira Advocacia e Consultoria Jurídica</strong>
+            oferece atendimento jurídico personalizado, buscando compreender
+            cada situação de forma individual e apresentar caminhos claros
+            para a defesa dos interesses de seus clientes.
+          </p>
+
+          <p>
+            O escritório está localizado na Avenida Coronel Pedro Paranhos,
+            em São Sebastião, Palmares - PE.
+          </p>
+
+          <div class="quote">
+            "Seu direito merece ser tratado com seriedade, estratégia e respeito."
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="number">DF</div>
+
+          <h3>David Ferreira</h3>
+
+          <p>
+            Advocacia e Consultoria Jurídica com atendimento profissional
+            e personalizado.
+          </p>
+
+          <br>
+
+          <p>
+            <strong>Palmares - PE</strong><br>
+            São Sebastião
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="services" id="servicos">
+    <div class="container">
+
+      <div class="section-title">
+        <span>Atuação</span>
+        <h2>Soluções jurídicas</h2>
+        <p>
+          Atendimento direcionado às necessidades de cada cliente.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service">
+          <div class="service-icon">⚖</div>
+          <h3>Consultoria Jurídica</h3>
+          <p>
+            Orientação jurídica personalizada para auxiliar na tomada
+            de decisões com mais segurança.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-icon">§</div>
+          <h3>Assessoria Jurídica</h3>
+          <p>
+            Acompanhamento jurídico e orientação estratégica para
+            diferentes necessidades.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-icon">◈</div>
+          <h3>Defesa de Direitos</h3>
+          <p>
+            Atuação voltada à proteção dos interesses e direitos
+            de cada cliente.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-icon">✓</div>
+          <h3>Análise de Casos</h3>
+          <p>
+            Avaliação cuidadosa das circunstâncias para identificar
+            alternativas jurídicas adequadas.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-icon">⌘</div>
+          <h3>Orientação Estratégica</h3>
+          <p>
+            Informações claras para que você possa compreender melhor
+            suas possibilidades jurídicas.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-icon">✦</div>
+          <h3>Atendimento Personalizado</h3>
+          <p>
+            Cada situação é analisada individualmente, com atenção
+            e compromisso profissional.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="features">
+    <div class="container">
+
+      <div class="section-title">
+        <span>Por que escolher</span>
+        <h2>Compromisso em cada atendimento</h2>
+        <p>
+          Uma relação profissional construída sobre confiança e transparência.
+        </p>
+      </div>
+
+      <div class="features-grid">
+
+        <div class="feature">
+          <strong>01</strong>
+          <h3>Transparência</h3>
+          <p>
+            Comunicação clara para que o cliente compreenda sua situação
+            e as alternativas disponíveis.
+          </p>
+        </div>
+
+        <div class="feature">
+          <strong>02</strong>
+          <h3>Compromisso</h3>
+          <p>
+            Dedicação e responsabilidade em todas as etapas do atendimento.
+          </p>
+        </div>
+
+        <div class="feature">
+          <strong>03</strong>
+          <h3>Proximidade</h3>
+          <p>
+            Atendimento humanizado, buscando compreender as necessidades
+            específicas de cada pessoa.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES -->
+  <section class="reviews" id="avaliacoes">
+    <div class="container">
+
+      <div class="section-title">
+        <span>Avaliações</span>
+        <h2>A confiança dos clientes</h2>
+      </div>
+
+      <div class="rating">★★★★★</div>
+
+      <div class="rating-number">5,0</div>
+
+      <p class="review-text">
+        Avaliação de <strong>5,0 estrelas</strong> no Google, baseada
+        em <strong>14 avaliações</strong>.
+      </p>
+
+      <p>
+        Atendimento profissional e compromisso com seus clientes.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact" id="contato">
+    <div class="container">
+
+      <div class="section-title">
+        <span>Fale conosco</span>
+        <h2>Entre em contato</h2>
+        <p>
+          Para informações e atendimento, entre em contato diretamente
+          com o escritório.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+
+          <h3>Informações</h3>
+
+          <div class="contact-item">
+            <span>Telefone</span>
+            <a class="phone" href="tel:+5581997671068">
+              (81) 99767-1068
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <span>Endereço</span>
+            <p>
+              Av. Cel. Pedro Paranhos, 175<br>
+              Cs 04 - São Sebastião<br>
+              Palmares - PE<br>
+              CEP 55540-000
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <span>Atendimento</span>
+            <p>
+              Consulte o escritório para confirmar o horário
+              disponível para atendimento.
+            </p>
+          </div>
+
+          <br>
+
+          <a
+            class="btn btn-primary"
+            href="https://www.google.com/maps/search/?api=1&query=Av.+Cel.+Pedro+Paranhos,+175,+Palmares,+PE"
+            target="_blank"
+          >
+            Abrir no Google Maps
+          </a>
+
+        </div>
+
+        <div class="contact-card">
+
+          <h3>Localização</h3>
+
+          <iframe
+            class="map"
+            src="https://www.google.com/maps?q=Av.%20Cel.%20Pedro%20Paranhos%2C%20175%2C%20Palmares%2C%20PE&output=embed"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Precisa de orientação jurídica?</h2>
+
+    <p>
+      Entre em contato com a DF David Ferreira Advocacia e Consultoria Jurídica.
+    </p>
+
+    <a class="btn" href="tel:+5581997671068">
+      (81) 99767-1068
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      <strong>DF David Ferreira Advocacia e Consultoria Jurídica</strong>
+    </p>
+
+    <p>
+      Av. Cel. Pedro Paranhos, 175 - Cs 04 - São Sebastião,
+      Palmares - PE - 55540-000
+    </p>
+
+    <p>
+      © 2026 DF David Ferreira Advocacia e Consultoria Jurídica.
+      Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <!-- BOTÃO WHATSAPP -->
+  <a
+    class="whatsapp"
+    href="https://wa.me/5581997671068?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20atendimento%20jurídico."
+    target="_blank"
+    aria-label="Falar pelo WhatsApp"
+  >
+    ☎
+  </a>
+
+</body>
+</html>
+```
